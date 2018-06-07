@@ -10,6 +10,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'paperclip', '~> 6.0'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+gem 'searchkick', '~> 3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

@@ -1,6 +1,14 @@
 class BooksController < ApplicationController
   before_action :find_book, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
+
+  def search
+    if params[:search].present?
+      @books = Book.search(params[:search])
+    else
+      @books = Book.all
+    end
+  end
   def index
     if params[:category].blank?
       @books = Book.all.order("created_at DESC").paginate(page: params[:page], per_page:8)
