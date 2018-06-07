@@ -1,0 +1,10 @@
+<h1>Edit User</h1>
+
+
+<%= simple_form_for @user, :html => {:multipart => true} do |f| %>
+
+    <%= f.file_field :avatar %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.button :submit, :class => 'btn-custom2'%>
+<%end%>

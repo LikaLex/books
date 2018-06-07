@@ -2,7 +2,9 @@
   <div class="review-rating" data-score="<%= review.rating %>"></div>
   <p class="review-comment"><%=  review.comment%></p>
   <p>Submited by: </p>
-  <p class="review-submit"><%= review.user.email %></p>
+
+  <p class="review-submit"><%= image_tag review.user.avatar.url(:user_comment) %>
+   <%= review.user.email %></p>
 
   <% if user_signed_in? %>
 

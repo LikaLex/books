@@ -1,0 +1,21 @@
+<div class="row">
+
+  <% @users.each do |user| %>
+
+      <div class="col-md-3">
+        <a href="/users/<%= user.id %>" >
+          <%= image_tag user.avatar.url(:user_index), class: "book" %>
+          <%= user.first_name%>
+        </a>
+      </div>
+
+  <% end %>
+
+</div>
+
+
+<div class="pagniation-wrapper">
+
+  <%= will_paginate @users, renderer: BootstrapPagination::Rails,
+                    previous_label:'Previous', next_label: 'Next', inner_window:1, outer_window:0 %>
+</div>
