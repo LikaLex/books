@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   resources :books do
     collection do
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
     end
     resources :reviews
   end
+
+  resources :users
 
   root 'books#index'
 end
