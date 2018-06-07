@@ -183,6 +183,15 @@ p.alert, p.notice {
     }
   }
 
+  .book-price{
+    font-size: 1.8em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    span {
+      font-size: 0.80em;
+    }
+  }
+
   .book-desc {
     font-size: 1.05em;
     line-height: 1.5;
