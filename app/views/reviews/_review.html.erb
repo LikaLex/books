@@ -3,7 +3,7 @@
   <p class="review-comment"><%=  review.comment%></p>
   <p>Submited by: </p>
 
-  <p class="review-submit"><%= image_tag review.user.avatar.url(:user_comment) %>
+  <p class="review-submit"><%= image_tag review.user.avatar.url(:thumb), class: "user-review-show"  %>
    <%= review.user.email %></p>
 
   <% if user_signed_in? %>

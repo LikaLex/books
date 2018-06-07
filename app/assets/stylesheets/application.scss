@@ -330,3 +330,40 @@ p.alert, p.notice {
 .pagniation-wrapper {
   text-align: center;
 }
+
+
+.user {
+  height: 350px;
+  width: 250px;
+  margin-bottom: 40px;
+  @include background-tile;
+}
+
+
+.user-show {
+  height: 475px;
+  width: 355px;
+  @include background-tile;
+}
+
+
+.user-review-show {
+  height: 75px;
+  width: 75px;
+
+}
+
+.btn-user {
+  color: darken(#9988ff, 5%);
+  background-color: #fff;
+  border: 2px solid darken(#9988ff, 5%);
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  &:hover {
+    text-decoration: none;
+    background-color: darken(#f1c40f, 5%);
+    color: #fff;
+    transition: 0.5s;
+  }
+}
