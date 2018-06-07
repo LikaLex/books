@@ -1,6 +1,8 @@
 <div class="review">
   <div class="review-rating" data-score="<%= review.rating %>"></div>
   <p class="review-comment"><%=  review.comment%></p>
+  <p>Submited by: </p>
+  <p class="review-submit"><%= review.user.email %></p>
 
   <% if user_signed_in? %>
 
