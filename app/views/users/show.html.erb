@@ -10,7 +10,11 @@
     <div class="book-info">
       <h2 class="book-title"><%= @user.first_name%></h2>
       <h2 class="book-title"><%= @user.last_name%></h2>
+      <p class="book-desc"><%= @user.user_about%></p>
       <%= link_to 'Back', users_path, class: 'btn-user' %>
+          <% if @user.id == current_user.id %>
+              <%= link_to 'Edit', edit_user_path, class: 'btn-user' %>
+          <% end %>
     </div>
 
   </div>
