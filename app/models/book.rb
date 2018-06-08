@@ -1,6 +1,7 @@
 class Book < ApplicationRecord
   searchkick
   belongs_to :user
+  belongs_to :author
   belongs_to :category
   has_many :reviews
   has_attached_file :book_img, :styles => { :book_index => "250x350>", :book_show => "325x475>" },

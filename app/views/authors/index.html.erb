@@ -1,0 +1,21 @@
+<div class="row">
+
+  <% @authors.each do |author| %>
+
+      <div class="col-md-3">
+        <a href="/authors/<%= author.id %>" >
+          
+          <%= author.first_name%>
+        </a>
+      </div>
+
+  <% end %>
+
+</div>
+
+
+<div class="pagniation-wrapper">
+
+  <%= will_paginate @authors, renderer: BootstrapPagination::Rails,
+                    previous_label:'Previous', next_label: 'Next', inner_window:1, outer_window:0 %>
+</div>
