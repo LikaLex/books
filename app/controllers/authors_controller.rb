@@ -31,8 +31,8 @@ class AuthorsController < ApplicationController
 
   def update
 
-    if @author.update(user_params)
-      redirect_to author_path(@author)
+    if @author.update(author_params)
+      redirect_to authors_path(@author)
     else
       render 'edit'
     end

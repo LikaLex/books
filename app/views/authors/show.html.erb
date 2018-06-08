@@ -6,6 +6,8 @@
       <h2 class="book-title"><%= @author.name%></h2>
       <p class="book-desc"><%= @author.about%></p>
       <%= link_to 'Back', authors_path, class: 'btn-user' %>
+      <%= link_to 'Edit', edit_author_path, class: 'btn-user' %>
+
 
     </div>
 
