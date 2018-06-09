@@ -9,7 +9,8 @@
           <%= f.file_field :book_img %>
           <%= f.input :title, label: 'Book Title '%>
           <%= f.input :description%>
-          <%= f.input :author %>
+          <%= f.select :author_id, @authors%>
+
           <%= f.input :price %>
           <%= f.input :publication_year %>
           <%= f.input :number_of_pages %>

@@ -8,16 +8,36 @@
 
   <div class="col-md-8">
     <div class="book-info">
-      <h2 class="book-title"><%= @user.first_name%></h2>
-      <h2 class="book-title"><%= @user.last_name%></h2>
+      <h2 class="book-title"><%= @user.first_name%> <%= @user.last_name%></h2>
+      <h2 class="book-title">Email:<%= link_to @user.email%></h2>
       <p class="book-desc"><%= @user.user_about%></p>
-      <%= link_to 'Back', users_path, class: 'btn-user' %>
+
+
+      <%= link_to 'Back to users', users_path, class: 'btn-user' %>
           <% if @user.id == current_user.id %>
               <%= link_to 'Edit', edit_user_path, class: 'btn-user' %>
           <% end %>
     </div>
 
   </div>
+
+
+
+</div>
+
+<h1><%= @user.first_name%> made a review of:</h1>
+<h3>(Click on the book to view a review)</h3>
+
+<% @user.reviews.each do |review| %>
+
+    <div class="col-md-3">
+      <a href="/books/<%= review.book.id %>">
+        <%= review.book.title %>
+        <%= image_tag review.book.book_img.url(:book_index), class: "book" %>
+      </a>
+    </div>
+
+<% end %>
 
 </div>
 
