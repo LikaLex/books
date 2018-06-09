@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-md-4">
 
-    <%= image_tag @author.author_avatar.url(:original), class: 'user-show' %>
+    <%= image_tag @author.author_avatar.url(:original), class: 'author-show' %>
 
   </div>
 
@@ -10,8 +10,8 @@
     <div class="book-info">
       <h2 class="book-title"><%= @author.name%></h2>
       <p class="book-desc"><%= @author.about%></p>
-      <%= link_to 'Back', authors_path, class: 'btn-user' %>
-      <%= link_to 'Edit', edit_author_path, class: 'btn-user' %>
+      <%= link_to 'Back', authors_path, class: 'btn-author' %>
+      <%= link_to 'Edit', edit_author_path, class: 'btn-author' %>
 
 
     </div>

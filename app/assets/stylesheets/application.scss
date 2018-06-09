@@ -386,3 +386,36 @@ p.alert, p.notice {
     transition: 0.5s;
   }
 }
+
+
+
+.author {
+  margin-top: 50px;
+  height: 350px;
+  width: 250px;
+  margin-bottom: 20px;
+  @include background-tile;
+}
+
+
+.author-show {
+  height: 475px;
+  width: 355px;
+  @include background-tile;
+}
+
+
+.btn-author {
+  color: darken(#9988ff, 5%);
+  background-color: #fff;
+  border: 2px solid darken(#9988ff, 5%);
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  &:hover {
+    text-decoration: none;
+    background-color: darken(#f1c, 5%);
+    color: #fff;
+    transition: 0.5s;
+  }
+}
