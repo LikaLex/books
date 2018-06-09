@@ -23,17 +23,26 @@
 
   </div>
 
-<h1>Authors books:</h1>
 
-<% @author.books.each do |book| %>
+<% if @author.books.blank? %>
+    <h1>No books found</h1>
+    <% else%>
+    <h1>Authors books:</h1>
 
-    <div class="col-md-3">
-      <a href="/books/<%= book.id %>">
-        <%= image_tag book.book_img.url(:book_index), class: "book" %>
-      </a>
-    </div>
+    <% @author.books.each do |book| %>
 
-<% end %>
+        <div class="col-md-3">
+          <a href="/books/<%= book.id %>">
+            <%= image_tag book.book_img.url(:book_index), class: "book" %>
+          </a>
+        </div>
+
+    <% end %>
+
+
+<% end%>
+
+
 
 
 </div>
