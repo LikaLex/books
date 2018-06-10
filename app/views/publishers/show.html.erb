@@ -1,0 +1,12 @@
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="book-info">
+      <h2 class="book-title"><%= @publisher.title%></h2>
+      <p class="book-desc"><%= @publisher.description%></p>
+    </div>
+    <%= link_to 'Back to publishers', publishers_path, class: 'btn-author' %>
+    <%= link_to 'Edit', edit_publisher_path, class: 'btn-author' %>
+  </div>
+
+</div>
