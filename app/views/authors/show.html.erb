@@ -33,7 +33,9 @@
 
         <div class="col-md-3">
           <a href="/books/<%= book.id %>">
+            <%= book.title %>
             <%= image_tag book.book_img.url(:book_index), class: "book" %>
+
           </a>
         </div>
 

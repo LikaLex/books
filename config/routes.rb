@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   end
 
   resources :users
-  resources :authors
+  resources :authors do
+  collection do
+    get 'search'
+  end
+  end
 
   root 'books#index'
 end

@@ -2,6 +2,13 @@ class AuthorsController < ApplicationController
   before_action :find_author, only: [:show, :edit, :update]
   #before_action :authenticate_user!, only: [ :edit]
 
+  def search
+    if params[:search].present?
+      @authors = Author.search(params[:search])
+    else
+      @authors = Author.all
+    end
+    end
 
   def index
     @authors = Author.all.order("created_at DESC").paginate(page: params[:page], per_page:8)
