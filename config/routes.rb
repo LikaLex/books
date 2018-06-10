@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get 'search'
   end
   end
+  resources :publishers
 
   root 'books#index'
 end

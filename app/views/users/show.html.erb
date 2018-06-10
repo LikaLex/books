@@ -14,6 +14,7 @@
 
 
       <%= link_to 'Back to users', users_path, class: 'btn-user' %>
+      <%= link_to 'Back to books', root_path, class: 'btn-user' %>
           <% if @user.id == current_user.id %>
               <%= link_to 'Edit', edit_user_path, class: 'btn-user' %>
           <% end %>
@@ -32,7 +33,7 @@
 
     <div class="col-md-3">
       <a href="/books/<%= review.book.id %>">
-        <%= review.book.title %>
+
         <%= image_tag review.book.book_img.url(:book_index), class: "book" %>
       </a>
     </div>
