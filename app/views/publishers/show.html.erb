@@ -15,3 +15,23 @@
   </div>
 
 </div>
+
+<% if @publisher.books.blank? %>
+    <h1>No books found</h1>
+<% else%>
+    <h1>Publishers books:</h1>
+
+    <% @publisher.books.each do |book| %>
+
+        <div class="col-md-3">
+          <a href="/books/<%= book.id %>">
+
+            <%= image_tag book.book_img.url(:book_index), class: "book" %>
+
+          </a>
+        </div>
+
+    <% end %>
+
+
+<% end%>
