@@ -9,6 +9,7 @@
     <div class="book-info">
       <h2 class="book-title"><%= @book.title%></h2>
       <h3 class="book-author"><span>From </span><%= link_to @book.author.name, author_path(@book.author.id)%></h3>
+      <h3 class="book-author"><span>Publisher </span><%= link_to @book.publisher.title, publisher_path(@book.publisher.id)%></h3>
       <h3 class="book-price"><span>Price: </span><%= @book.price%> $</h3>
       <h3 class="book-publication-year"><span>First publication: </span><%= @book.publication_year%></h3>
       <h3 class="book-number-of-pages"><span>The number of pages: </span><%= @book.number_of_pages%></h3>

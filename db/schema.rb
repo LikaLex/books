@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_10_090333) do
+ActiveRecord::Schema.define(version: 2018_06_11_072628) do
 
   create_table "authors", force: :cascade do |t|
     t.text "name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2018_06_10_090333) do
     t.integer "publication_year"
     t.integer "number_of_pages"
     t.integer "author_id"
+    t.integer "publisher_id"
   end
 
   create_table "categories", force: :cascade do |t|
