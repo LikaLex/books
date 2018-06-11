@@ -419,3 +419,35 @@ p.alert, p.notice {
     transition: 0.5s;
   }
 }
+
+.publisher-show {
+  height: 235px;
+  width: 355px;
+  @include background-tile;
+}
+
+.publisher {
+  margin-top: 50px;
+  height: 180px;
+  width: 250px;
+  margin-bottom: 20px;
+  @include background-tile;
+}
+
+.btn-publisher {
+  color: darken(#ff0000, 5%);
+  background-color: #fff;
+  border: 2px solid darken(#f1c40f, 5%);
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  &:hover {
+    text-decoration: none;
+    background-color: darken(#ff0000, 5%);
+    color: #fff;
+    transition: 0.5s;
+  }
+}
+
+
+
