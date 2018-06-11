@@ -31,7 +31,7 @@ class BooksController < ApplicationController
     @book = current_user.books.build
     @categories = Category.all.map{|c| [c.name, c.id]}
     @authors = Author.all.map{|a| [a.name, a.id]}
-    @publishers = Publisher.all.map{|p| [p.name, p.id]}
+    @publishers = Publisher.all.map{|p| [p.title, p.id]}
 
 
   end
@@ -53,7 +53,7 @@ class BooksController < ApplicationController
   def edit
     @categories = Category.all.map{|c| [c.name, c.id]}
     @authors = Author.all.map{|a| [a.name, a.id]}
-    @publishers = Publisher.all.map{|p| [p.name, p.id]}
+    @publishers = Publisher.all.map{|p| [p.title, p.id]}
 
   end
 
