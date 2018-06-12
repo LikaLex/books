@@ -23,6 +23,8 @@
       <% if user_signed_in? %>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'Add Book', new_book_path %></li>
+          <li><%= link_to 'Add Author', new_author_path %></li>
+          <li><%= link_to 'Add Publisher', new_publisher_path %></li>
           <li><%= link_to 'Users', users_path %></li>
           <li><%= link_to 'Authors', authors_path %></li>
           <li><%= link_to 'Publishers', publishers_path %></li>
@@ -34,7 +36,7 @@
     </ul>
 
       <%= form_tag search_books_path , method: :get,
-          class: 'navbar-form navbar-right', role: 'search' do %>
+          class: 'navbar-form navbar-left', role: 'search' do %>
           <p>
             <%= text_field_tag :search, params[:search], class: 'form-control' %>
             <%= submit_tag 'Search Book', name: nil, class: 'btn-custom2' %>
