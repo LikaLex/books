@@ -51,7 +51,7 @@ class PublishersController < ApplicationController
 
   private
   def publisher_params
-    params.require(:publisher).permit(:title, :description, :publisher_avatar, :foundation_date)
+    params.require(:publisher).permit(:title, :description, :publisher_avatar, :foundation_date, :country)
   end
 
   def find_publisher
