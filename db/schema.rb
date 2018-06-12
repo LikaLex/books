@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_161409) do
+ActiveRecord::Schema.define(version: 2018_06_12_170027) do
 
   create_table "authors", force: :cascade do |t|
     t.text "name"
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 2018_06_12_161409) do
     t.datetime "publisher_avatar_updated_at"
     t.integer "foundation_date"
     t.text "country"
+    t.text "ceo"
+    t.text "founder"
   end
 
   create_table "reviews", force: :cascade do |t|
