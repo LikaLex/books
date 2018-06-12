@@ -1,6 +1,14 @@
 class PublishersController < ApplicationController
   before_action :find_publisher, only: [:show, :edit, :update]
   before_action :authenticate_user!
+
+  def search
+    if params[:search].present?
+      @publishers = Publisher.search(params[:search])
+    else
+      @publishers = Publisher.all
+    end
+  end
   
   def index
     @publishers = Publisher.all.order("created_at DESC").paginate(page: params[:page], per_page:8)

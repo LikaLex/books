@@ -1,0 +1,14 @@
+<div class="row">
+
+  <% @publishers.each do |publisher| %>
+
+      <div class="col-md-3">
+        <a href="/publishers/<%= publisher.id %>">
+          <%= image_tag publisher.publisher_avatar.url(:medium), class: "publisher" %>
+          <%= publisher.title %>
+        </a>
+      </div>
+
+  <% end %>
+
+</div>

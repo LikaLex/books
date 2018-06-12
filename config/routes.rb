@@ -14,7 +14,11 @@ Rails.application.routes.draw do
     get 'search'
   end
   end
-  resources :publishers
+  resources :publishers do
+    collection do
+      get 'search'
+    end
+  end
 
   root 'books#index'
 end
