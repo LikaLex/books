@@ -51,7 +51,7 @@ class AuthorsController < ApplicationController
 
   private
   def author_params
-    params.require(:author).permit(:name, :about, :author_avatar)
+    params.require(:author).permit(:name, :about, :author_avatar, :age)
   end
 
   def find_author

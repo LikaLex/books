@@ -9,7 +9,9 @@
   <div class="col-md-8">
     <div class="book-info">
       <h2 class="book-title"><%= @user.first_name%> <%= @user.last_name%></h2>
-      <h2 class="book-title">Email:<%= link_to @user.email%></h2>
+      <h2 class="book-title">Email: <%= link_to @user.email%></h2>
+      <h2 class="book-title">Created: <%= @user.created_at%></h2>
+      <h2 class="book-title">Last sign at: <%=  @user.last_sign_in_at%></h2>
       <p class="book-desc"><%= @user.user_about%></p>
 
 
