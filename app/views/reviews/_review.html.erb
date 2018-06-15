@@ -1,6 +1,12 @@
 <div class="review">
   <div class="review-rating" data-score="<%= review.rating %>"></div>
-  <p class="review-comment"><%=  review.comment%></p>
+  <p class="review-comment">
+    <% if review.comment.length < 100 %>
+    <%=  review.comment%>
+        <% else %>
+    <%= review.comment.truncate(100, omission: "... (continue) ")%>
+        <% link_to "Read more", review.comment.last(review.comment.length-100) %></p>
+        <% end %>
   <p>Submited by: </p>
 
   <p class="review-submit"><%= image_tag review.user.avatar.url(:thumb), class: "user-review-show"  %>
