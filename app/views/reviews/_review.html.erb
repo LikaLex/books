@@ -5,7 +5,7 @@
 
   <p class="review-submit"><%= image_tag review.user.avatar.url(:thumb), class: "user-review-show"  %>
     <% if review.user.first_name.blank?%>
-        <%= link_to review.user.id, user_path(review.user.id) %>
+       user_id <%= link_to  review.user.id, user_path(review.user.id) %>
     <% elsif review.user.last_name.blank? %>
         <%= link_to review.user.first_name , user_path(review.user.id) %>
 
