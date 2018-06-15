@@ -42,23 +42,7 @@
             <%= submit_tag 'Search Book', name: nil, class: 'btn-custom2' %>
           </p>
       <% end %>
-
-      <%= form_tag search_authors_path, method: :get,
-                   class: 'navbar-form navbar-left', role: 'search' do %>
-          <p>
-            <%= text_field_tag :search, params[:search], class: 'form-control' %>
-            <%= submit_tag 'Search Author', name: nil, class: 'btn-custom2' %>
-          </p>
-      <% end %>
-
-      <%= form_tag search_publishers_path, method: :get,
-                   class: 'navbar-form navbar-left', role: 'search' do %>
-          <p>
-            <%= text_field_tag :search, params[:search], class: 'form-control' %>
-            <%= submit_tag 'Search Publisher', name: nil, class: 'btn-custom2' %>
-          </p>
-      <% end %>
-
+      
 
 
       <ul class="nav navbar-nav ">

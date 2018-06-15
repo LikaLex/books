@@ -4,7 +4,8 @@
   <p>Submited by: </p>
 
   <p class="review-submit"><%= image_tag review.user.avatar.url(:thumb), class: "user-review-show"  %>
-   <%= link_to review.user.email, user_path(review.user.id) %></p>
+   <%= link_to review.user.first_name + " " + review.user.last_name, user_path(review.user.id) %> </p>
+
 
   <% if user_signed_in? %>
 

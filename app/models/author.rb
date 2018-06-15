@@ -1,5 +1,4 @@
 class Author < ApplicationRecord
-  searchkick
   has_many :books
 
   has_attached_file :author_avatar, styles: { medium: "300x300>", thumb: "100x100>" },

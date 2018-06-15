@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :reviews
 
   has_attached_file :avatar, :styles =>  {:medium => "250x350>",
-                                          :original => "325x475>" , :thumb=> "100x100>"  },
+                                          :original => "325x475>" , :thumb=> "100x200>"  },
                     default_url: 'person.png'
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
