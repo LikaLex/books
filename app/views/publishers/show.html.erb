@@ -8,10 +8,25 @@
   <div class="col-md-8">
     <div class="book-info">
       <h2 class="book-title"><%= @publisher.title%></h2>
-      <h2 class="publisher-foundation">Foundation date: <%= @publisher.foundation_date%></h2>
-      <h2 class="publisher-country">Founder: <%= @publisher.founder%></h2>
-      <h2 class="publisher-country">CEO: <%= @publisher.ceo%></h2>
-      <h2 class="publisher-country">Country: <%= @publisher.country%></h2>
+      <% if @publisher.foundation_date.blank?%>
+      <% else %>
+          <h2 class="publisher-foundation">Foundation date: <%= @publisher.foundation_date%></h2>
+      <% end %>
+
+      <% if @publisher.founder.blank?%>
+      <% else %>
+          <h2 class="publisher-country">Founder: <%= @publisher.founder%></h2>
+      <% end %>
+      <% if @publisher.ceo.blank?%>
+      <% else %>
+          <h2 class="publisher-country">CEO: <%= @publisher.ceo%></h2>
+      <% end %>
+      <% if @publisher.country.blank?%>
+      <% else %>
+          <h2 class="publisher-country">Country: <%= @publisher.country%></h2>
+      <% end %>
+
+
       <p class="book-desc"><%= @publisher.description%></p>
     </div>
     <%= link_to 'Back to publishers', publishers_path, class: 'btn-publisher' %>

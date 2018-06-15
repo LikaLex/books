@@ -8,9 +8,21 @@
 
   <div class="col-md-8">
     <div class="book-info">
-      <h2 class="book-title"><%= @author.name%> </h2>
-      <h2 class="book-title">Age: <%= @author.age%> years</h2>
-      <p class="book-desc"><%= @author.about%></p>
+      <% if @author.name.blank?%>
+      <% else %>
+          <h2 class="book-title"><%= @author.name%> </h2>
+      <% end %>
+
+      <% if @author.age.blank?%>
+      <% else %>
+          <h2 class="book-title">Age: <%= @author.age%> years</h2>
+      <% end %>
+
+      <% if @author.about.blank?%>
+      <% else %>
+          <p class="book-desc"><%= @author.about%></p>
+    <% end %>
+
 
     </div>
 

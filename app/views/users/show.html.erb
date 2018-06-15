@@ -10,8 +10,16 @@
     <div class="book-info">
       <h2 class="book-title"><%= @user.first_name%> <%= @user.last_name%></h2>
       <h2 class="book-title">Email: <%= link_to @user.email%></h2>
-      <h2 class="book-title">Created: <%= @user.created_at%></h2>
-      <h2 class="book-title">Last sign at: <%=  @user.last_sign_in_at%></h2>
+      <% if @user.created_at.blank?%>
+      <% else %>
+          <h2 class="book-title">Created: <%= @user.created_at%></h2>
+      <% end %>
+
+      <% if @user.last_sign_in_at.blank?%>
+      <% else %>
+          <h2 class="book-title">Last sign at: <%=  @user.last_sign_in_at%></h2>
+      <% end %>
+
       <p class="book-desc"><%= @user.user_about%></p>
 
 
