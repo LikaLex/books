@@ -3,9 +3,13 @@
 
 <%= simple_form_for @author do |f| %>
     <%= f.file_field :author_avatar %>
-
     <%= f.input :name %>
     <%= f.input :about%>
     <%= f.input :age%>
+    <%= link_to 'Cancel', author_path, class: 'btn-cancel' %>
     <%= f.button :submit, :class => 'btn-custom2'%>
+
 <%end%>
+
+
+

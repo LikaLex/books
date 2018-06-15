@@ -460,3 +460,19 @@ p.alert, p.notice {
 }
 
 
+.btn-cancel {
+
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #222;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  &:hover {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    transition: 0.7s;
+  }
+}
+
