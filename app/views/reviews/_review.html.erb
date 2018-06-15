@@ -4,7 +4,15 @@
   <p>Submited by: </p>
 
   <p class="review-submit"><%= image_tag review.user.avatar.url(:thumb), class: "user-review-show"  %>
-   <%= link_to review.user.first_name + " " + review.user.last_name, user_path(review.user.id) %> </p>
+    <% if review.user.first_name.blank?%>
+        <%= link_to review.user.id, user_path(review.user.id) %>
+    <% elsif review.user.last_name.blank? %>
+        <%= link_to review.user.first_name , user_path(review.user.id) %>
+
+    <% else %>
+        <%= link_to review.user.first_name + " " + review.user.last_name, user_path(review.user.id) %> </p>
+    <% end %>
+
 
 
   <% if user_signed_in? %>
