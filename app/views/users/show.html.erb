@@ -18,6 +18,14 @@
       <% else %>
           <h2 class="book-title">Last sign at: <%=  @user.last_sign_in_at%></h2>
       <% end %>
+      <% if @user.gender_id.blank?%>
+      <% else %>
+          <% if  @user.gender_id. == 1%>
+              <h2 class="book-title">Gender:male</h2>
+          <% else %>
+              <h2 class="book-title">Gender:female</h2>
+          <% end %>
+      <% end %>
 
       <p class="book-desc"><%= @user.user_about%></p>
 
