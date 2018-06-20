@@ -4,6 +4,7 @@ class Book < ApplicationRecord
   belongs_to :author
   belongs_to :publisher
   belongs_to :category
+  belongs_to :age
   has_many :reviews
   has_attached_file :book_img, :styles => { :book_index => "250x350>", :book_show => "325x475>" },
                     :default_url => 'book.jpg'

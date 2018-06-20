@@ -26,6 +26,7 @@
         <div class="average-review-rating" data-score=<%= @average_review %>></div>
         <span class="number-of-reviews">Based on <%= @book.reviews.count %> reviews</span>
       <h4>Category:<%= link_to @book.category.name,  params[:category]%></h4>
+      <h4>Recommended age for reading:<%= link_to @book.age.name,  params[:age]%></h4>
       <p class="book-desc"><%= @book.description%></p>
     </div>
   </div>

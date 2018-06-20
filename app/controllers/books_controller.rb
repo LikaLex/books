@@ -32,6 +32,7 @@ class BooksController < ApplicationController
     @categories = Category.all.map{|c| [c.name, c.id]}
     @authors = Author.all.map{|a| [a.name, a.id]}
     @publishers = Publisher.all.map{|p| [p.title, p.id]}
+    @ages = Age.all.map{|a| [a.name, a.id]}
 
 
   end
@@ -41,6 +42,7 @@ class BooksController < ApplicationController
     @book.category_id  = params[:category_id]
     @book.author_id  = params[:author_id]
     @book.publisher_id  = params[:publisher_id]
+    @book.age_id = params[:age_id]
 
     if @book.save
       redirect_to root_path
@@ -54,6 +56,7 @@ class BooksController < ApplicationController
     @categories = Category.all.map{|c| [c.name, c.id]}
     @authors = Author.all.map{|a| [a.name, a.id]}
     @publishers = Publisher.all.map{|p| [p.title, p.id]}
+    @ages = Age.all.map{|a| [a.name, a.id]}
 
   end
 
@@ -61,6 +64,7 @@ class BooksController < ApplicationController
     @book.category_id  = params[:category_id]
     @book.author_id  = params[:author_id]
     @book.publisher_id  = params[:publisher_id]
+    @book.age_id = params[:age_id]
 
     if @book.update(book_params)
       redirect_to book_path(@book)
@@ -82,7 +86,7 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :description,
                                  :category_id, :book_img, :price,
                                  :publication_year, :number_of_pages,
-                                 :author_id, :publisher_id)
+                                 :author_id, :publisher_id, :age_id)
   end
 
   def find_book

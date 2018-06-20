@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_20_115600) do
+ActiveRecord::Schema.define(version: 2018_06_20_122129) do
+
+  create_table "ages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "authors", force: :cascade do |t|
     t.text "name"
@@ -42,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_06_20_115600) do
     t.integer "author_id"
     t.integer "publisher_id"
     t.string "slug"
+    t.integer "age_id"
     t.index ["slug"], name: "index_books_on_slug", unique: true
   end
 

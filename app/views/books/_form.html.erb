@@ -5,6 +5,7 @@
     <%= f.input :description%>
     <%= select_tag(:author_id, options_for_select(@authors), :prompt => 'Select an author' )%>
     <%= select_tag(:publisher_id, options_for_select(@publishers), :prompt => 'Select a publisher' )%>
+    <%= select_tag(:age_id, options_for_select(@ages), :prompt => 'Select an age' )%>
     <%= f.input :price %>
     <%= f.input :publication_year %>
     <%= f.input :number_of_pages %>
