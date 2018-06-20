@@ -18,6 +18,15 @@
           <h2 class="book-title">Age: <%= @author.age%> years</h2>
       <% end %>
 
+      <% if @author.gender_id.blank?%>
+      <% else %>
+          <% if  @author.gender_id. == 1%>
+              <h2 class="book-title">Gender:male</h2>
+          <% else %>
+              <h2 class="book-title">Gender:female</h2>
+          <% end %>
+      <% end %>
+
       <% if @author.about.blank?%>
       <% else %>
           <p class="book-desc"><%= @author.about%></p>
