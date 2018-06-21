@@ -37,6 +37,8 @@
           <% end %>
     </div>
 
+
+
   </div>
 
 
@@ -56,6 +58,26 @@
     </div>
 
 <% end %>
+
+
+<div class="col-md-8">
+
+<h1><%= @user.first_name%> create pages of these books:</h1>
+<h3>(Click on the book )</h3>
+
+<% @user.books.each do |book| %>
+
+    <div class="col-md-7">
+      <a href="/books/<%= book.id %>">
+
+        <%= book.title %>
+      </a>
+    </div>
+
+<% end %>
+
+</div>
+
 
 </div>
 
