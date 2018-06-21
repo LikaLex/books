@@ -27,7 +27,22 @@
         <span class="number-of-reviews">Based on <%= @book.reviews.count %> reviews</span>
       <h4>Category:<%= link_to @book.category.name,  params[:category]%></h4>
       <h4>Recommended age for reading:<%= link_to @book.age.name,  params[:age]%></h4>
-      <p class="book-desc"><%= @book.description%></p>
+      <h4 >This page is created by:
+        <% if @book.user.first_name.blank?%>
+            <%= link_to  @book.user.id, user_path(@book.user.id) %>
+        <% elsif @book.user.last_name.blank? %>
+            <%= link_to @book.user.first_name , user_path(@book.user.id) %>
+
+        <% else %>
+            <%= link_to @book.user.first_name + " " + @book.user.last_name, user_path(@book.user.id) %>
+        <% end %>
+      </h4>
+
+
+
+
+
+            <p class="book-desc"><%= @book.description%></p>
     </div>
   </div>
 </div>
