@@ -45,20 +45,29 @@
 
 </div>
 
-<h1><%= @user.first_name%> made a review of:</h1>
-<h3>(Click on the book to view a review)</h3>
 
-<% @user.reviews.each do |review| %>
 
-    <div class="col-md-3">
-      <a href="/books/<%= review.book.id %>">
+<% if @user.reviews.blank?%>
+<% else %>
+    <h1><%= @user.first_name%> made a review of:</h1>
+    <h3>(Click on the book to view a review)</h3>
 
-        <%= image_tag review.book.book_img.url(:book_index), class: "book" %>
-      </a>
-    </div>
+    <% @user.reviews.each do |review| %>
 
+        <div class="col-md-3">
+          <a href="/books/<%= review.book.id %>">
+
+            <%= image_tag review.book.book_img.url(:book_index), class: "book" %>
+          </a>
+        </div>
+
+    <% end %>
 <% end %>
 
+
+
+<% if @user.books.blank?%>
+<% else %>
 
 <div class="col-md-8">
 
@@ -80,4 +89,5 @@
 
 
 </div>
+<% end %>
 
