@@ -31,6 +31,8 @@
     </div>
     <%= link_to 'Back to publishers', publishers_path, class: 'btn-publisher' %>
     <%= link_to 'Edit', edit_publisher_path, class: 'btn-publisher' %>
+    <%= link_to 'Delete', publisher_path(@publisher),
+                method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-publisher' %>
   </div>
 
 </div>

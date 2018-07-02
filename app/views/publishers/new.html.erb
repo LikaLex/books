@@ -2,6 +2,7 @@
 
 <%= form_for @publisher, url: publishers_path, html: { multipart: true }  do |form| %>
     <%= form.file_field :publisher_avatar %>
+    <%= form.text_field :title, label: 'Title'%>
 
     <%= form.submit %>
 <% end %>

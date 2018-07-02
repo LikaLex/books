@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  before_action :find_author, only: [:show, :edit, :update]
+  before_action :find_author, only: [:show, :edit, :update, :destroy]
   #before_action :authenticate_user!, only: [ :edit]
 
   def search
@@ -47,6 +47,12 @@ class AuthorsController < ApplicationController
   end
   def show
     @author  = Author.find(params[:id])
+  end
+
+  def destroy
+    @author.destroy
+    redirect_to authors_path
+
   end
 
   private

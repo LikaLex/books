@@ -67,11 +67,15 @@
 
 
 <% if @user.books.blank?%>
+
 <% else %>
 
 <div class="col-md-8">
-
+<% if @user.books.count == 1 %>
+      <h1><%= @user.first_name%> create a page of this book:</h1>
+      <% else %>
 <h1><%= @user.first_name%> create pages of these books:</h1>
+      <%  end%>
 <h3>(Click on the book )</h3>
 
 <% @user.books.each do |book| %>

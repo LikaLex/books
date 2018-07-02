@@ -1,5 +1,5 @@
 class PublishersController < ApplicationController
-  before_action :find_publisher, only: [:show, :edit, :update]
+  before_action :find_publisher, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
   def search
@@ -45,6 +45,12 @@ class PublishersController < ApplicationController
   end
   def show
     @publisher  = Publisher.find(params[:id])
+  end
+
+  def destroy
+    @publisher.destroy
+    redirect_to publishers_path
+
   end
 
   private

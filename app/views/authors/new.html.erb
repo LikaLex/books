@@ -2,6 +2,7 @@
 
 <%= form_for @author, url: authors_path, html: { multipart: true }  do |form| %>
     <%= form.file_field :author_avatar %>
+    <%= form.text_field :name, label: 'Name'%>
     <%= form.submit %>
 <% end %>
 
