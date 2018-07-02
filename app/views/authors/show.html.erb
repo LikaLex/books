@@ -23,7 +23,12 @@
           <% if  @author.gender_id. == 1%>
               <h2 class="book-title">Gender:male</h2>
           <% else %>
-              <h2 class="book-title">Gender:female</h2>
+              <% if  @author.gender_id. == 2%>
+                  <h2 class="book-title">Gender:female</h2>
+              <% else %>
+
+              <h2 class="book-title">Gender:some stupid person gave me unknown number of gender</h2>
+              <% end %>
           <% end %>
       <% end %>
 
