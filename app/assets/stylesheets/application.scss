@@ -29,7 +29,8 @@
 
 
 body {
-  background-color: #f5f5f5;
+  background: url('background.jpg') no-repeat center center;
+  background-size: cover;
   font-family: 'Lora', serif;
 }
 
@@ -48,6 +49,9 @@ p.alert, p.notice {
 .navbar {
   font-family: 'Ubuntu', sans-serif;
   text-transform: uppercase;
+  background: url('head.jpg') no-repeat center center;
+  background-size: cover;
+  
 }
 .navbar-default {
   background-color: #fff;
