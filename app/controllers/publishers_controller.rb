@@ -1,6 +1,6 @@
 class PublishersController < ApplicationController
   before_action :find_publisher, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [ :edit, :update, :destroy]
 
   def search
     if params[:search].present?
