@@ -32,6 +32,11 @@
           <% end %>
       <% end %>
 
+      <% if @user.age.blank?%>
+      <% else %>
+          <h2 class="book-title">Age: <%= @user.age%></h2>
+      <% end %>
+
       <p class="book-desc"><%= @user.user_about%></p>
 
 
