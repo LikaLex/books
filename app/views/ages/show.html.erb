@@ -1,0 +1,6 @@
+<h1 class="book-title"><%= @age.name%> </h1>
+
+<%= link_to 'Back to ages', ages_path, class: 'btn-author' %>
+<%= link_to 'Edit', edit_age_path, class: 'btn-author' %>
+<%= link_to 'Delete', age_path(@age),
+            method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-author' %>

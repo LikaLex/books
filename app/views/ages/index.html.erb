@@ -1,0 +1,13 @@
+<div class="row">
+
+  <% @age.each do |age| %>
+
+      <div class="col-md-3">
+        <a href="/ages/<%= age.id %>" >
+          <%= age.name%>
+        </a>
+      </div>
+
+  <% end %>
+
+</div>
