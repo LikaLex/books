@@ -1,0 +1,13 @@
+<div class="row">
+
+  <% @category.each do |category| %>
+
+      <div class="col-md-3">
+        <a href="/categories/<%= category.id %>" >
+          <%= category.name%>
+        </a>
+      </div>
+
+  <% end %>
+
+</div>

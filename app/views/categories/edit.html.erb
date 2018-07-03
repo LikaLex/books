@@ -1,0 +1,11 @@
+<h1>Edit Category</h1>
+
+
+<%= simple_form_for @category do |f| %>
+
+    <%= f.input :name %>
+    <%= link_to 'Cancel', root_path, class: 'btn-cancel' %>
+    <%= f.button :submit, :class => 'btn-custom2'%>
+
+<%end%>
+

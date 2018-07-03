@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   end
 
   resources :ages
+  resources :categories
 
   root 'books#index'
 end
