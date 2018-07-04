@@ -4,7 +4,7 @@
     <% if review.comment.length < 100 %>
     <%=  review.comment%>
         <% else %>
-    <%= review.comment.truncate(100, omission: "... (continue) ")%>
+    <%= review.comment%>
         <% link_to "Read more", review.comment.last(review.comment.length-100) %></p>
         <% end %>
   <p>Submited by: </p>

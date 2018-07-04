@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  searchkick
+
   belongs_to :user
   belongs_to :author
   belongs_to :publisher
