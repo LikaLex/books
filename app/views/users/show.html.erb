@@ -37,6 +37,16 @@
           <h2 class="book-title">Age: <%= @user.age%></h2>
       <% end %>
 
+      <% if @user.country.blank?%>
+      <% else %>
+          <h2 class="book-title">Country: <%= @user.country%></h2>
+      <% end %>
+
+      <% if @user.town.blank?%>
+      <% else %>
+          <h2 class="book-title">Town: <%= @user.town%></h2>
+      <% end %>
+
       <p class="book-desc"><%= @user.user_about%></p>
 
 
