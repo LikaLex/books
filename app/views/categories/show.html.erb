@@ -1,6 +1,9 @@
 <h1 class="book-title"><%= @category.name%> </h1>
+<p><%= @category.about%></p>
 
 <%= link_to 'Back to categories', categories_path, class: 'btn-author' %>
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_category_path, class: 'btn-author' %>
 <%= link_to 'Delete', category_path(@category),
             method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-author' %>
+<% end %>

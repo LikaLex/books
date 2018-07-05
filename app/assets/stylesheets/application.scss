@@ -481,4 +481,21 @@ p.alert, p.notice {
   }
 }
 
+.category-index{
+  height: 50px;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #f1c40f;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+  &:hover {
+    text-decoration: none;
+    background-color: #ADff2f;
+    color: #fff;
+    transition: 0.7s;
+  }
+
+}
 

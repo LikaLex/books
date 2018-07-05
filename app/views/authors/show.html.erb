@@ -41,9 +41,17 @@
     </div>
 
       <%= link_to 'Back to authors', authors_path, class: 'btn-author' %>
+    <% if user_signed_in? %>
       <%= link_to 'Edit', edit_author_path, class: 'btn-author' %>
       <%= link_to 'Delete', author_path(@author),
-                  method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-author' %>
+                      method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-author' %>
+        <% unless @user == nil %>
+          <%= button_to 'Delete', authors_path, method: :delete,
+                        data: { confirm: 'AAAAAAAAAAHHHH NOOOOOO !!!! Are you sure?!?!?!?!'},
+                    class: 'btn btn-danger mr-1' %>
+        <% end %>
+
+    <% end %>
 
 
 

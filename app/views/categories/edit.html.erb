@@ -4,6 +4,7 @@
 <%= simple_form_for @category do |f| %>
 
     <%= f.input :name %>
+    <%= f.input :about %>
     <%= link_to 'Cancel', root_path, class: 'btn-cancel' %>
     <%= f.button :submit, :class => 'btn-custom2'%>
 
