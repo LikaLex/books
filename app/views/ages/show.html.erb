@@ -1,6 +1,29 @@
 <h1 class="book-title"><%= @age.name%> </h1>
 
 <%= link_to 'Back to ages', ages_path, class: 'btn-author' %>
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_age_path, class: 'btn-author' %>
 <%= link_to 'Delete', age_path(@age),
             method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-author' %>
+<% end %>
+
+
+<% if @age.books.blank? %>
+    <h1>No books found</h1>
+<% else%>
+    <h1>Books, recommended to this age:</h1>
+
+    <% @age.books.each do |book| %>
+
+        <div class="col-md-3">
+          <a href="/books/<%= book.id %>">
+            <%= book.title %>
+            <%= image_tag book.book_img.url(:book_index), class: "book" %>
+
+          </a>
+        </div>
+
+    <% end %>
+
+
+<% end%>

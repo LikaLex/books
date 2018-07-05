@@ -35,6 +35,7 @@
           <li><%= link_to 'Authors', authors_path %></li>
           <li><%= link_to 'Publishers', publishers_path %></li>
           <li><%= link_to 'Ages', ages_path %></li>
+          <li><%= link_to 'Categories', categories_path %></li>
 
           <li><%= link_to 'My account', user_path(current_user)%></li>
 
@@ -46,6 +47,7 @@
           <li><%= link_to 'Authors', authors_path %></li>
           <li><%= link_to 'Publishers', publishers_path %></li>
           <li><%= link_to 'Ages', ages_path %></li>
+          <li><%= link_to 'Categories', categories_path %></li>
       <% end %>
     </ul>
 
@@ -63,20 +65,7 @@
         <% end %>
       </ul>
 
-      
 
-
-      <ul class="nav navbar-nav ">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-             aria-expanded="false"><li><%= link_to 'Categories', categories_path %></li> </a>
-            <% Category.all.each do |category| %>
-                <li class="<%= 'active' if params[:category] == category.name %>">
-                  <%= link_to category.name, books_path(category: category.name), class: 'link' %>
-                </li>
-            <% end %>
-        </li>
-      </ul>
 
 
     </div>

@@ -1,9 +1,36 @@
 <h1 class="book-title"><%= @category.name%> </h1>
-<p><%= @category.about%></p>
+
+<h4><%= @category.about%></h4>
+
+
+
+
+<% if @category.books.blank? %>
+
+    <h1>No books found in this category</h1>
+
+<% else%>
+
+
+    <% @category.books.each do |book| %>
+
+        <div class="col-md-3">
+          <a href="/books/<%= book.id %>">
+            <%= book.title %>
+            <%= image_tag book.book_img.url(:book_index), class: "book" %>
+
+          </a>
+        </div>
+
+    <% end %>
+
+
+<% end%>
+
 
 <%= link_to 'Back to categories', categories_path, class: 'btn-author' %>
 <% if user_signed_in? %>
-<%= link_to 'Edit', edit_category_path, class: 'btn-author' %>
-<%= link_to 'Delete', category_path(@category),
-            method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-author' %>
+    <%= link_to 'Edit', edit_category_path, class: 'btn-author' %>
+    <%= link_to 'Delete', category_path(@category),
+                method: :delete, data: { confirm: "Are you sure?" }, class: 'btn-author' %>
 <% end %>
