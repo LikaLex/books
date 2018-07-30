@@ -14,6 +14,10 @@
           <% else %>
           <h3 class="book-price"><span>Price: </span><%= @book.price%> $</h3>
       <% end %>
+      <% if @book.language.blank?%>
+      <% else %>
+          <h3 class="book-price"><span>Language: </span><%= @book.language%></h3>
+      <% end %>
       <% if @book.publication_year.blank?%>
       <% else %>
           <h3 class="book-publication-year"><span>First publication: </span><%= @book.publication_year%></h3>
